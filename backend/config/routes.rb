@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :shoe_models
+  resources :carts
+  resources :lineitems
   resources :brands
   resources :shoes
   resources :users
