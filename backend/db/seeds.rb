@@ -8,6 +8,6 @@
 
 
 Brand.create([{ company_name: 'Nike' }, { company_name: 'Air Jordan' }, { company_name: 'Reebok' }, { company_name: 'New Balance' }, { company_name: 'Puma' }, { company_name: 'Other' }])
- 
+
 # Shoe.create([{ name: 'Fire red 5' }, { size: '' }, { company_name: 'Reebok' }, { company_name: 'New Balance' }, { company_name: 'Puma' }, { company_name: 'Other' }])
  
