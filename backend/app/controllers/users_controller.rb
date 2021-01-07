@@ -1,33 +1,55 @@
 class UsersController < ApplicationController
-
-    #loads the signup page
- def new 
-    @user = User.new 
- end
-
- def home
-   #finds user by id
-   @user = User.find_by_id(session[:user_id])
-   # redirect_to user_path(@user.id)
-  end
-
- def create 
-    #creates a new user if the user saves the session user id will be set to equal the users id and then redirect to the shoe page
-   #  binding.pry
-    @user = User.new(user_params)
-    if @user.save 
-        session[:user_id] = @user.id 
-        redirect_to home_path
-    else 
-      # if user doesn't save renders new page
-        render :new
-    end
- end
-
-
-private 
-
- def user_params
-    params.require(:user).permit(:username, :email, :password)
- end
+   before_action :set_user, only: [:show, :update, :destroy]
+   # GET /users
+   def index
+     @users = User.all
+ 
+     render json: @users
+   end
+ 
+   # GET /users/1
+   def show
+       user_json = UserSerializer.new(@user).serialized_json
+     render json: user_json
+   end
+ 
+   # POST /users
+   def create
+     @user = User.new(user_params)
+     @location =  Location.find_or_create_by(city: params[:user][:hometown][:city], state: params[:user][:hometown][:state], country: params[:user][:hometown][:country])
+ 
+     @user.hometown = @location
+     if @user.save
+       session[:user_id] = @user.id
+       render json: UserSerializer.new(@user), status: :created
+     else
+       resp = {
+         error: @user.errors.full_messages.to_sentence
+       }
+       render json: resp, status: :unprocessable_entity
+     end
+   end
+ 
+   # PATCH/PUT /users/1
+   def update
+     if @user.update(user_params)
+       render json: @user
+     else
+       render json: @user.errors, status: :unprocessable_entity
+     end
+   end
+ 
+   # DELETE /users/1
+   def destroy
+     @user.destroy
+   end
+ 
+   private
+       def set_user
+       @user = User.find(params[:id])
+     end
+ 
+     def user_params
+       params.require(:user).permit(:username, :email, :password)
+     end
 end
