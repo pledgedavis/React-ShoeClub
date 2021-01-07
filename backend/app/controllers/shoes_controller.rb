@@ -1,24 +1,29 @@
 class ShoesController < ApplicationController
+    before_action :shoe_inst, only: [:show, :destroy]
 
+    
     def index 
-      if params[:brand_id] && brand = find_brand 
-          shoes = brands.shoes 
-       else
-          shoes = Shoe.ordered
-      end  
+      shoes = Shoe.all
+      render json: shoes, include: [:brand]
     end
 
     def show 
+        render json: @shoe
     end
     
     def update 
     end
 
-    def delete_all
+    def destroy 
+        @shoe.destroy
     end
 
     private 
 
+    def shoe_inst
+        @shoe = Shoe.find(params[:id])
+      end
+  
     def find_brand
         @brand= Brand.find_by(id: params[:brand_id])
     end
