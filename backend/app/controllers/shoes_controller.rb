@@ -1,7 +1,11 @@
 class ShoesController < ApplicationController
 
     def index 
-
+      if params[:brand_id] && brand = find_brand 
+          shoes = brands.shoes 
+       else
+          shoes = Shoe.ordered
+      end  
     end
 
     def show 
