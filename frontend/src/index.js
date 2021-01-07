@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 // gives react application access to the redux store 
 import { createStore, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
+import { composeWithDevTools } from 'redux-devtools-extension'
 
 ReactDOM.render(
   <React.StrictMode>
