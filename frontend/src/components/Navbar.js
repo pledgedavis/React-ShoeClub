@@ -1,17 +1,10 @@
-
-import yeezy from '../images/yeezy.jpg';
-import yeezy from '../images/yeezy2.jpg';
-import yeezy from '../images/yeezy3.jpg';
-import yeezy from '../images/yeezy4.jpg';
+import React, { useState } from 'react';
 
 
 
 
 
-
-
-
-const  Home= () =>{
+const  Navbar= () =>{
     const [basketNumbers, setBasketNumbers] = useState(0)
 
     const addToBasket = () => {
@@ -39,6 +32,4 @@ const  Home= () =>{
 
 }
 
-
-
-export default Home;
+export default Navbar;
