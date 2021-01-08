@@ -35,6 +35,20 @@ const Cart = ({cartProps}) =>{
 
    })
 
+    return (
+       <div className="container-products">
+           <h1>Cart</h1>
+           <h5 className="product-title">Product</h5>
+           <h5 className="product sm-hide">Price</h5>
+           <h5 className="quantity">Quantity</h5>
+           <h5 className="total">Total</h5>
+           <div className="products">
+               <h4 className="cartTotalTitle">Basket</h4>
+               <h4 className="cartTotal">{cartProps.cartCost},00</h4>
+           </div>
+        
+       </div>
+    )
 };
 
 const mapStateToProps = state => ({
