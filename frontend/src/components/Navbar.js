@@ -2,10 +2,10 @@ import React from 'react';
 
 const  Navbar= () =>{
     return (
-<div className="overlay">
+    <div>
       <header className="App-header">
        <nav>
-         <h2>Shop</h2>
+         <h2>Shoe Club</h2>
          <ul>
            <li><a href="#">Home</a></li>
            <li><a href="#">About</a></li>
