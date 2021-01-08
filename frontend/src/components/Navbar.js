@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { connect } from "react-redux";
 import { getNumbers } from "../actions/getAction";
 
-function Navbar(props) {
+const  Navbar = (props) =>{
    console.log(props);
 
      useEffect(() => {
