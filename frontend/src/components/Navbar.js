@@ -2,15 +2,17 @@ import React, {useEffect} from 'react';
 import { connect } from "react-redux";
 import { getNumbers } from "../actions/getAction";
 
-const  Navbar = (props) =>{
+function Navbar(props) {
+   console.log(props);
 
+     useEffect(() => {
+      getNumbers();
+     }, [])
 
-     useEffect = () =>{
-
-     }
     return (
-    <div>
-      <header className="App-header">
+
+      <header>
+       <div className="App-header">
        <nav>
          <h2>Shoe Club</h2>
          <ul>
@@ -20,16 +22,16 @@ const  Navbar = (props) =>{
                Cart<span>{props.cartProps.cartNumbers}</span></a></li>
          </ul>
        </nav>
+       </div>
       </header>
-    </div>
 
-
+   
     )
 
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = state => ({
     cartProps: state.cartState
-}
+})
 
 export default connect(mapStateToProps, { getNumbers })(Navbar)
