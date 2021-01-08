@@ -20,15 +20,14 @@ const  Home= () =>{
         <img src={yeezy} alt="Yeezy"/>
       <h3> first Yeezy </h3>
       <h3>$330</h3>
-      <a href="#">  Add to cart </a>
+      <a className="addToCart" href="#">  Add to cart </a>
      </div>
 
    <div className="image" >
-  
    <img src={yeezy2} alt="Yeezy"/>
    <h3> first Yeezy </h3>
    <h3>$330</h3>
-   <a href="#"> Add to cart </a>
+   <a className="addToCart" href="#">  Add to cart </a>
    </div>
 
 
