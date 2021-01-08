@@ -1,14 +1,15 @@
 // import logo from './logo.svg';
 import React from 'react';
 import Navbar from './components/Navbar';
+import Home from './components/Home'
 import './App.css';
-import Home from 
-// import {  BrowserRouter, Route, Switch} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
+     
+      <Home/>
     </div>
   );
 }

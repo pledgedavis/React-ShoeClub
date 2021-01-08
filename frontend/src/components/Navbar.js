@@ -1,17 +1,6 @@
-import React, { useState } from 'react';
-
-
-
-
+import React from 'react';
 
 const  Navbar= () =>{
-    const [basketNumbers, setBasketNumbers] = useState(0)
-
-    const addToBasket = () => {
-        console.log("Button Clicked");
-    }
-
-    // basketnumbers is the name of my state and setbasketnumbers updates the state
     return (
 <div className="overlay">
       <header className="App-header">
