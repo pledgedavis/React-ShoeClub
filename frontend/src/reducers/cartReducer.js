@@ -8,19 +8,19 @@ const initialState = {
            name: "first yeezy",
            price: 330.00,
            quantity: 0,
-           incart: false,
+           inCart: false,
        },
        yeezy2: {
         name: "second yeezy",
         price: 330.00,
         quantity: 0,
-        incart: false,
+        inCart: false,
     },
     yeezy3: {
         name: "third yeezy",
         price: 390.00,
         quantity: 0,
-        incart: false,
+        inCart: false,
     }
    }
 
@@ -30,8 +30,20 @@ const initialState = {
 export default (state = initialState, action) => {
    switch(action.type){
        case ADD_PRODUCT_CART:
+           let addQuantity = {...state.products[action.payload]}
+        console.log(addQuantity);
+        addQuantity.numbers += 1;
+        addQuantity.inCart = true
+        console.log(addQuantity);
+
          return {
-            cartNumbers: state.cartNumbers + 1
+             ...state,
+            cartNumbers: state.cartNumbers + 1,
+            cartCost: state.cartCost + state.products[action.payload].price,
+            products: {
+                ...state.products,
+                [action.payload]: addQuantity
+            }
          }
          case GET_NUMBERS_CART:
              return {
