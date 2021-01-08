@@ -3,13 +3,18 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home.js'
 import './App.css';
+import { Provider } from 'react-redux'
+import store from './store.js'
+
 
 function App() {
   return (
-    <div className="App">
+    <Provider store={store}>
+     <div className="App">
       <Navbar/>
       <Home/>
-    </div>
+     </div>
+    </Provider>
   );
 }
 

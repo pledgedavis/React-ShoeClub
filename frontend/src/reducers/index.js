@@ -1,8 +1,11 @@
 import { combineReducers } from 'redux'
-import appReducer from './appReducer'
+import cartReducer from './cartReducer'
 
-const rootReducer = combineReducers({
-      appReducer
+// const rootReducer = combineReducers({
+//       appReducer
+
+// })
+
+export default combineReducers({
 
 })
-
