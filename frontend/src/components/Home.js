@@ -4,7 +4,7 @@ import yeezy2 from '../images/yeezy2.jpg';
 import yeezy3 from '../images/yeezy3.jpg';
 import yeezy4 from '../images/yeezy4.jpg';
 import { connect } from 'react-redux';
-import { addBasket } from '../actions/addAction' 
+import { addCart } from '../actions/addAction' 
 
 
 
@@ -16,21 +16,21 @@ const  Home = (props) =>{
         <img src={yeezy} alt="Yeezy"/>
       <h3> first Yeezy </h3>
       <h3>$330</h3>
-      <a onClick={props.addBasket} className="addToCart cart1" href="#">  Add to cart </a>
+      <a onClick={props.addCart} className="addToCart cart1" href="#">  Add to cart </a>
      </div>
 
    <div className="image" >
    <img src={yeezy2} alt="Yeezy"/>
    <h3> second Yeezy </h3>
    <h3>$330</h3>
-   <a onClick={props.addBasket} className="addToCart cart2" href="#">  Add to cart </a>
+   <a onClick={props.addCart} className="addToCart cart2" href="#">  Add to cart </a>
    </div>
 
    <div className="image" >
    <img src={yeezy3} alt="Yeezy"/>
    <h3> third Yeezy </h3>
    <h3>$390</h3>
-   <a onClick={props.addBasket} className="addToCart cart3" href="#">  Add to cart </a>
+   <a onClick={props.addCart} className="addToCart cart3" href="#">  Add to cart </a>
    </div>
 
   
@@ -41,4 +41,4 @@ const  Home = (props) =>{
 
 
 
-export default connect(null, { addBasket })(Home);
+export default connect(null, { addCart })(Home);

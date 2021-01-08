@@ -1,7 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { connect } from "react-redux";
+import { getNumbers } from "../actions/getAction";
 
-const  Navbar = () =>{
+const  Navbar = (props) =>{
+
+
+     useEffect = () =>{
+
+     }
     return (
     <div>
       <header className="App-header">
@@ -11,7 +17,7 @@ const  Navbar = () =>{
            <li><a href="#">Home</a></li>
            <li><a href="#">About</a></li>
            <li className="cart"><a href="#"><ion-icon name="bag-remove-outline"></ion-icon>
-               Cart<span>0</span></a></li>
+               Cart<span>{props.cartProps.cartNumbers}</span></a></li>
          </ul>
        </nav>
       </header>
@@ -25,4 +31,5 @@ const  Navbar = () =>{
 const mapStateToProps = state => {
     cartProps: state.cartState
 }
-export default connect(null, { addBasket })(Navbar)
+
+export default connect(mapStateToProps, { getNumbers })(Navbar)
