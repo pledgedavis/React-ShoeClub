@@ -2,6 +2,15 @@ import { ADD_PRODUCT_CART, GET_NUMBERS_CART } from "../actions/type";
 
 const initialState = {
    cartNumbers: 0
+   cartCost: 0,
+   products: {
+       yeezy: {
+           name: "first yeezy",
+           price: 320.00,
+           quantity: 0,
+       }
+   }
+
 
 }
 
