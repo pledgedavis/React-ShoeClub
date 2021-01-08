@@ -16,24 +16,23 @@ const  Home = (props) =>{
         <img src={yeezy} alt="Yeezy"/>
       <h3> first Yeezy </h3>
       <h3>$330</h3>
-      <a onClick={props.addCart} className="addToCart cart1" href="#">  Add to cart </a>
+      <a onClick={() => props.addCart("yeezy")} className="addToCart cart1" href="#">  Add to cart </a>
      </div>
 
    <div className="image" >
-   <img src={yeezy2} alt="Yeezy"/>
+   <img src={yeezy2} alt="Yeezy2"/>
    <h3> second Yeezy </h3>
    <h3>$330</h3>
-   <a onClick={props.addCart} className="addToCart cart2" href="#">  Add to cart </a>
+   <a onClick={() => props.addCart("yeezy2")} className="addToCart cart2" href="#">  Add to cart </a>
    </div>
 
    <div className="image" >
-   <img src={yeezy3} alt="Yeezy"/>
+   <img src={yeezy3} alt="Yeezy3"/>
    <h3> third Yeezy </h3>
    <h3>$390</h3>
-   <a onClick={props.addCart} className="addToCart cart3" href="#">  Add to cart </a>
+   <a onClick={() => props.addCart("yeezy3")} className="addToCart cart3" href="#">  Add to cart </a>
    </div>
-
-  
+   
 </div>
     )
 
