@@ -15,12 +15,11 @@ function App() {
     <Provider store={store}>
      <div className="App">
        <BrowserRouter>
+       <Navbar/>
        <Switch>
        <Route exact path="/" component={Home}/>
-       <Route path="/cart" component={cart}/>
+       <Route path="/cart" component={Cart}/>
        </Switch>
-      <Navbar/>
-      <Home/>
       </BrowserRouter>
      </div>
     </Provider>
