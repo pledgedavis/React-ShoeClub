@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from "react-redux";
 
-const  Navbar= () =>{
+const  Navbar = () =>{
     return (
     <div>
       <header className="App-header">
@@ -21,4 +22,7 @@ const  Navbar= () =>{
 
 }
 
-export default Navbar;
+const mapStateToProps = state => {
+    cartProps: state.cartState
+}
+export default connect(null, { addBasket })(Navbar)
