@@ -7,5 +7,6 @@ import cartReducer from './cartReducer'
 // })
 
 export default combineReducers({
+      cartState: cartReducer
 
-})
+});
