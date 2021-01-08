@@ -10,7 +10,7 @@ function Home(){
          <ul>
            <li><a href="#">Home</a></li>
            <li><a href="#">About</a></li>
-           <li className="cart"><a href="#"><ion-icon name="basket"></ion-icon>
+           <li className="cart"><a href="#"><ion-icon name="bag-remove-outline"></ion-icon>
                Cart<span>0</span></a></li>
          </ul>
        </nav>
