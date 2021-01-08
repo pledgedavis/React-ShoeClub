@@ -1,15 +1,14 @@
 // import logo from './logo.svg';
 import React from 'react';
 import Navbar from './components/Navbar';
-import Home from './components/Home'
+import Home from './components/Home.js'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-     
-      <Home/>
+      <footer><Home/></footer>
     </div>
   );
 }

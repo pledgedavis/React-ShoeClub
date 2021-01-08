@@ -17,12 +17,22 @@ const  Home= () =>{
     return (
 <div className="container">
       <div className="image" >
-    <img src="yeezy" alt="Yeezy"/>
+        <img src={yeezy} alt="Yeezy"/>
       <h3> first Yeezy </h3>
       <h3>$330</h3>
       <a href="#">  Add to cart </a>
      </div>
-    </div>
+
+   <div className="image" >
+  
+   <img src={yeezy2} alt="Yeezy"/>
+   <h3> first Yeezy </h3>
+   <h3>$330</h3>
+   <a href="#"> Add to cart </a>
+   </div>
+
+
+</div>
     )
 
 }

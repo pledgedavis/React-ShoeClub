@@ -72,3 +72,14 @@ padding-right: 5px;
   cursor: pointer;
   text-decoration: none;
 }
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 300px;
+  padding-bottom: 100px;
+}
+
