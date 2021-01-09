@@ -1,20 +1,42 @@
 import './App.css';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-function App() {
+class App extends Component {
+
+   componentDidCatch(){
+
+   }
+
+  render(){
+    // const shoes = this.props.shoes.map((shoe, i) =>{
+    //   return <li key ={i} >{shoe.name}</li>
+    // });
+ 
   return (
     <div className="App">
       <header className="App-header">
         
-        <p>
-       HELLO
-        </p>
+        <h1>
+       Shoegram
+        </h1>
         
       </header>
     </div>
-  );
+  ); 
+  }
 }
 
-export default App;
+
+const mapStateToProps = state => {
+console.log(state)
+  return {
+     shoe: state.shoeReducer.shoes,
+     loading: state.shoeReducer.loading
+  }
+}
+
+export default connect(mapStateToProps)(App);
 
 
 

@@ -2,14 +2,15 @@ import { FETCH_ALL_SHOES } from './type'
 
 
 
-export function fetchAllShoes(){
-    return (dispatch) => {
+export const fetchAllShoes = () => {
+    return dispatch => { 
+            dispatch({type: "LOADING_SHOES"})
         fetch('/shoes')
         .then(resp => resp.json())
         .then(shoes => dispatch({
-            type: 'FETCH_ALL_SHOES',
+            type: 'FETCHED_ALL_SHOES',
             payload: shoes
         }))
-    }
+    };
 }
 
