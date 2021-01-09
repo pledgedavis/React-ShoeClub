@@ -1,11 +1,12 @@
 import './App.css';
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { fetchAllShoes } from "./actions";
 
 class App extends Component {
 
    componentDidCatch(){
-
+ 
    }
 
   render(){

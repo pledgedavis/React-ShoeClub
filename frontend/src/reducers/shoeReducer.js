@@ -1,7 +1,11 @@
 export default (state = {shoes: [], loading: false}, action) => {
         switch(action.type) {  
+
+            case("LOADING_SHOES"):
+            return {...state, loading: true}
+            case("FETCHED_ALL_SHOES"):
+            return {...state, loading: false, shoes: action.payload}
             default:
-                // the dispatched action is not in this reducer, return the state unchanged
                 return state;
         }
     }
