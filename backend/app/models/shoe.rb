@@ -1,4 +1,4 @@
 class Shoe < ApplicationRecord
-    belongs_to :brand
+   has_many :comments 
     # belongs_to :user
 end

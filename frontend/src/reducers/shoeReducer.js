@@ -1,15 +1,3 @@
-// export const shoesReducer = (state = [], action) => {
-//     switch(action.type){
-//         case 'FETCH_ALL_SHOES':
-//             return action.payload
-//         default:
-//             return state
-//     }
-
-// }
-
-
-
 function shoesReducer(state, action) {
     switch(action.type) {
         case FETCH_ALL_SHOES:

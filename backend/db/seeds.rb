@@ -7,12 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create( username: 'Pledge')
- 
-Brand.create([{ company_name: 'Nike' }, { company_name: 'Air Jordan' }, { company_name: 'Reebok' }, { company_name: 'New Balance' }, { company_name: 'Puma' }, { company_name: 'Yeezy' }, { company_name: 'Other' }])
+Shoe.create(name: 'Fire red',  size: '10',  price: '2')
+Shoe.create(name: 'Yeezy1',  size: '9',  price: '560')
+Shoe.create(name: 'Yeezy2',  size: '11',  price: '390')
+Shoe.create(name: 'Yeezy3',  size: '7',  price: '340')
 
-Shoe.create(name: 'Fire red',  size: '10',  price: '2',  brand_id: '1')
-Shoe.create(name: 'Yeezy1',  size: '9',  price: '560',  brand_id: '12')
-Shoe.create(name: 'Yeezy2',  size: '11',  price: '390',  brand_id: '12')
-Shoe.create(name: 'Yeezy3',  size: '7',  price: '340',  brand_id: '12')
-#  byebug
+
+Comment.create(description: "Cool", shoe_id: "1")
+Comment.create(description: "Looks good", shoe_id: "2")

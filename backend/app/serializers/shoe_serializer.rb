@@ -1,4 +1,5 @@
 class ShoeSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :size, :price, :image, :brand_id, :user_id 
+  attributes :id, :name, :size, :price, :image
+  has_many :comments
 end
