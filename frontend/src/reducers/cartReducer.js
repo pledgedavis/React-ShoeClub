@@ -6,18 +6,21 @@ const initialState = {
    products: {
        yeezy: {
            name: "first yeezy",
-           price: 330.00,
+           tagName: 'first yeezy',
+           price: 340.00,
            quantity: 0,
            inCart: false,
        },
        yeezy2: {
         name: "second yeezy",
+        tagName: 'second yeezy',
         price: 330.00,
         quantity: 0,
         inCart: false,
     },
     yeezy3: {
         name: "third yeezy",
+        tagName: 'third yeezy',
         price: 390.00,
         quantity: 0,
         inCart: false,

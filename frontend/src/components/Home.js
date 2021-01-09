@@ -9,6 +9,8 @@ import { addCart } from '../actions/addAction'
 
 
 const  Home = (props) =>{
+
+
     console.log(props)
     return (
 <div className="container">
@@ -32,7 +34,7 @@ const  Home = (props) =>{
    <h3>$390</h3>
    <a onClick={() => props.addCart("yeezy3")} className="addToCart cart3" href="#">  Add to cart </a>
    </div>
-   
+
 </div>
     )
 

@@ -17,12 +17,26 @@ const Cart = ({cartProps}) =>{
        console.log(productsInCart)
    })
 
-   const productImages = [yeezy, yeezy2, yeezy3]
+//    const productImages = [yeezy, yeezy2, yeezy3]
+
+const productImages = (product) => {
+
+    if(product.tagName === 'first yeezy' ){
+    return yeezy
+    } else if(product.tagName === 'second yeezy'){
+        return yeezy2
+    } else if(product.tagName === 'third yeezy'){
+        return yeezy3
+    }
+
+}
+
+
 
    productsInCart = productsInCart.map( (product, index) => {
         return(
             <Fragment>
-                        <div className="product"><ion-icon name="close-circle"></ion-icon><img src={productImages[index]}/>
+                        <div className="product"><ion-icon name="close-circle"></ion-icon><img src={productImages(product)}/>
                         <span className="sm-hide">{product.name}</span>
                         </div>
                         <div className="price sm-hide">${product.price},00</div>
