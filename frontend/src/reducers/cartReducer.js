@@ -1,6 +1,7 @@
-import { ADD_PRODUCT_CART, GET_NUMBERS_CART } from "../actions/type";
+import { ADD_PRODUCT_CART, GET_NUMBERS_CART, FETCH_ALL_SHOES } from "../actions/type";
 
 const initialState = {
+    FETCH_ALL_SHOES,
    cartNumbers: 0,
    cartCost: 0,
    products: {

@@ -1,6 +1,10 @@
-export const fetchAllShoes = () => {
+import { FETCH_ALL_SHOES } from './type'
+
+
+
+export function fetchAllShoes(){
     return (dispatch) => {
-        fetch('http://localhost:3001/shoes')
+        fetch('/shoes')
         .then(resp => resp.json())
         .then(shoes => dispatch({
             type: 'FETCH_ALL_SHOES',
@@ -8,3 +12,4 @@ export const fetchAllShoes = () => {
         }))
     }
 }
+

@@ -1,20 +1,48 @@
-import React, { state } from 'react';
+import React, { state,useState,useEffect } from 'react';
 import yeezy from '../images/yeezy.jpg';
 import yeezy2 from '../images/yeezy2.jpg';
 import yeezy3 from '../images/yeezy3.jpg';
 import yeezy4 from '../images/yeezy4.jpg';
 import { connect } from 'react-redux';
 import { addCart } from '../actions/addAction' 
+import { fetchAllShoes } from "../actions/shoesAction";
 
 
 
 const  Home = (props) =>{
+  // http://localhost:3001/shoes
+const [products, setProducts]=useState([])
+
+const getProducts = (route)=>{
+  fetch(route)
+  .then(res=>res.json())
+  .then(data=> setProducts(data))
+  .catch(err=>console.log(err))
+}
 
 
-    console.log(props)
+    useEffect(()=>{
+      getProducts('/shoes')
+    }, [])
+
+    console.log(products)
+
+    console.log(fetchAllShoes())
     return (
 <div className="container">
+  
+        {products.map(item => {
+          return <div>
+                <h3>{item.name}</h3>
+               
+
+          </div>
+        })}
+
+
+
       <div className="image" >
+      
         <img src={yeezy} alt="Yeezy"/>
       <h3> first Yeezy </h3>
       <h3>$330</h3>
