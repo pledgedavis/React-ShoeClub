@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux'
-import appReducer from './appReducer'
+import shoeReducer from './shoeReducer'
 
 const rootReducer = combineReducers({
-      appReducer
+      shoeReducer
 
 })
+
+
+export default rootReducer
