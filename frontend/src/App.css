@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
-
+/* 
 * {
 margin: 0;
 padding: 0%;
@@ -112,7 +112,7 @@ padding-right: 5px;
 }
 /* 
  /* cart page */ 
- .container-products {
+ /* .container-products {
   max-width: 650px;
   justify-content: space-around;
   margin: 0 auto;
@@ -206,8 +206,4 @@ padding-right: 5px;
     padding-right: 8%;
   }
 
-
-
-
-
-} 
+ */

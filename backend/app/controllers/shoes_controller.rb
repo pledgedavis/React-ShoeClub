@@ -10,7 +10,31 @@ class ShoesController < ApplicationController
     def show 
         render json: @shoe
     end
+
+
     
+  def create
+    @shoe = Shoe.new(shoe_params)
+
+    if @shoe.save
+      render json: @shoe, status: :created, location: @shoe
+    else
+      render json: @shoe
+    end
+  end
+
+ 
+  def update
+    if @shoe.update(shoe_params)
+      render json: @shoe
+    else
+      render json: @shoe
+    end
+  end
+
+  def destroy
+    @shoe.destroy
+  end
 
     private 
 
