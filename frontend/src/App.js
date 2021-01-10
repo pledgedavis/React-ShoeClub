@@ -1,12 +1,11 @@
 import './App.css';
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchAllShoes } from "./actions";
+import { fetchAllShoes } from "./actions/shoesAction";
 
 class App extends Component {
-
-   componentDidCatch(){
- 
+   componentDidMount(){
+      this.props.fetchAllShoes()
    }
 
   render(){
@@ -15,15 +14,19 @@ class App extends Component {
     // });
  
   return (
+
+  //  <Router>
     <div className="App">
       <header className="App-header">
-        
         <h1>
        Shoegram
         </h1>
-        
+        {/* <li>{this.props.loading ? <h3>Loading...</h3>}</li> */}
+        {console.log("hello", this.shoes)}
+        <h3> <li>{this.shoes}</li></h3>
       </header>
     </div>
+    // </Router>
   ); 
   }
 }
@@ -32,12 +35,12 @@ class App extends Component {
 const mapStateToProps = state => {
 console.log(state)
   return {
-     shoe: state.shoeReducer.shoes,
+     shoes: state.shoeReducer.shoes,
      loading: state.shoeReducer.loading
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, {fetchAllShoes})(App);
 
 
 

@@ -1,7 +1,4 @@
-import { FETCH_ALL_SHOES } from './type'
-
-
-
+// import { FETCH_ALL_SHOES } from './type'
 export const fetchAllShoes = () => {
     return dispatch => { 
             dispatch({type: "LOADING_SHOES"})
