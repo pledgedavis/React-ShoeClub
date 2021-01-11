@@ -3,6 +3,7 @@ class ShoesController < ApplicationController
 
     
     def index 
+      # binding.pry
       shoes = Shoe.all
       render json: shoes, include: [:comments]
     end

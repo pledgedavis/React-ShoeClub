@@ -23,7 +23,7 @@ class App extends Component {
         </h1>
         {/* <li>{this.props.loading ? <h3>Loading...</h3>}</li> */}
         {console.log("hello", this.shoes)}
-        <h3> <li>{this.shoes}</li></h3>
+        <h3> <li>{this.shoes} hello</li></h3>
       </header>
     </div>
     // </Router>
