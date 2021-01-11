@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-    before_action :comment_inst, only: [:show, :update, :destroy]
+    before_action :comment_inst, only: [:show, :destroy]
 
     def index 
         comments = Comment.all
@@ -8,11 +8,15 @@ class CommentsController < ApplicationController
     end
 
     def show
-         
+         if @comment
+            render json: @comment
+         else
+            render json: {status: "error", code:3000, message: "This comment does not exist" }
     end
 
-
-
+    def destroy 
+       @comment.destroy
+    end
 
 
       private 
