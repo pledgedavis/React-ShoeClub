@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
             render json: @comment
          else
             render json: {status: "error", code:3000, message: "This comment does not exist" }
+         end
     end
 
     def destroy 
