@@ -11,8 +11,6 @@ class ShoesController < ApplicationController
         render json: @shoe
     end
 
-
-    
   def create
     @shoe = Shoe.new(shoe_params)
 
