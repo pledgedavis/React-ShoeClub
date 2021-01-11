@@ -8,8 +8,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import  Welcome from "./containers/Welcome";
 import  Shoe from "./containers/Shoe";
-
-
+import Contact from "./containers/Contact";
+import Navbar from './components/Navbar'
 
 
 class App extends Component {
@@ -25,9 +25,11 @@ class App extends Component {
 
     return(
       <Router>
+        <Navbar/>
       <Switch>
         <Route  exact path="/" component={Welcome}/>
         <Route  exact path="/shoe" component={Shoe}/>
+        <Route  exact path="/contact" component={Contact}/>
       </Switch>
       </Router>
     )
