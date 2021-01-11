@@ -3,8 +3,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Home from './components/Home';
 import { fetchAllShoes } from "./actions/shoesAction";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import { Component } from 'react';
+
+import  Welcome from "./containers/Welcome";
+import  Shoe from "./containers/Shoe";
+
 
 
 
@@ -18,23 +22,39 @@ class App extends Component {
       return <li key ={i} >{shoe.name}</li>
     });
  
-  return (
 
-        // <Router>
-    <div className="App">
-      <header className="App-header">
-      {/* <Route exact path="/" component={Home} /> */}
-        <h1>
-       Shoegram
-        </h1>
-        <p>{this.props.loading ? <h3>Loading...</h3> : shoes }</p>
-        {console.log("hello", this.shoes)}
+    return(
+      <Router>
+      <Switch>
+        <Route  exact path="/" component={Welcome}/>
+        <Route  exact path="/shoe" component={Shoe}/>
+      </Switch>
+      </Router>
+    )
+
+
+
+
+
+
+
+  // return (
+
+  //       // <Router>
+  //   <div className="App">
+  //     <header className="App-header">
+  //     {/* <Route exact path="/" component={Home} /> */}
+  //       <h1>
+  //      Shoegram
+  //       </h1>
+  //       <p>{this.props.loading ? <h3>Loading...</h3> : shoes }</p>
+  //       {console.log("hello", this.shoes)}
        
-      </header>
-    </div>
-    // </Router>
+  //     </header>
+  //   </div>
+  //   // </Router>
    
-  ); 
+  // ); 
   }
 }
 
