@@ -1,7 +1,12 @@
 import './App.css';
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Home from './components/Home';
 import { fetchAllShoes } from "./actions/shoesAction";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import { Component } from 'react';
+
+
 
 class App extends Component {
    componentDidMount(){
@@ -9,24 +14,26 @@ class App extends Component {
    }
 
   render(){
-    // const shoes = this.props.shoes.map((shoe, i) =>{
-    //   return <li key ={i} >{shoe.name}</li>
-    // });
+    const shoes = this.props.shoes.map((shoe, i) =>{
+      return <li key ={i} >{shoe.name}</li>
+    });
  
   return (
 
-  //  <Router>
+        // <Router>
     <div className="App">
       <header className="App-header">
+      {/* <Route exact path="/" component={Home} /> */}
         <h1>
        Shoegram
         </h1>
-        {/* <li>{this.props.loading ? <h3>Loading...</h3>}</li> */}
+        <p>{this.props.loading ? <h3>Loading...</h3> : shoes }</p>
         {console.log("hello", this.shoes)}
-        <h3> <li>{this.shoes} hello</li></h3>
+       
       </header>
     </div>
     // </Router>
+   
   ); 
   }
 }
@@ -41,6 +48,7 @@ console.log(state)
 }
 
 export default connect(mapStateToProps, {fetchAllShoes})(App);
+
 
 
 
