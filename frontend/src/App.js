@@ -1,7 +1,7 @@
 import './App.css';
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchAllShoes } from "./actions/shoesAction";
+import { fetchAllShoes } from "./store/actions/shoesAction";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import { Component } from 'react';
 
@@ -14,14 +14,14 @@ import Navbar from './components/Navbar'
 
 
 class App extends Component {
-   componentDidMount(){
-      this.props.fetchAllShoes()
-   }
+  //  componentDidMount(){
+  //     this.props.fetchAllShoes()
+  //  }
 
   render(){
-    const shoes = this.props.shoes.map((shoe, i) =>{
-      return <li key ={i} >{shoe.name}</li>
-    });
+    // const shoes = this.props.shoes.map((shoe, i) =>{
+    //   return <li key ={i} >{shoe.name}</li>
+    // });
  
 
     return(
@@ -62,15 +62,17 @@ class App extends Component {
 }
 
 
-const mapStateToProps = state => {
-console.log(state)
-  return {
-     shoes: state.shoeReducer.shoes,
-     loading: state.shoeReducer.loading
-  }
-}
+// const mapStateToProps = state => {
+// console.log(state)
+//   return {
+//      shoes: state.shoeReducer.shoes,
+//      loading: state.shoeReducer.loading
+//   }
+// }
 
-export default connect(mapStateToProps, {fetchAllShoes})(App);
+// export default connect(mapStateToProps, {fetchAllShoes})(App);
+
+export default App
 
 
 
