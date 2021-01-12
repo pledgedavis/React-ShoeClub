@@ -1,7 +1,6 @@
 import './App.css';
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Home from './components/Home';
 import { fetchAllShoes } from "./actions/shoesAction";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import { Component } from 'react';
