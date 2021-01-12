@@ -7,9 +7,11 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import { Component } from 'react';
 
 import  Welcome from "./containers/Welcome";
-import  Shoe from "./containers/Shoe";
+import  Shoes from "./containers/Shoes";
 import Contact from "./containers/Contact";
 import Navbar from './components/Navbar'
+
+
 
 
 class App extends Component {
@@ -28,7 +30,7 @@ class App extends Component {
         <Navbar/>
       <Switch>
         <Route  exact path="/" component={Welcome}/>
-        <Route  exact path="/shoe" component={Shoe}/>
+        <Route  exact path="/shoes" component={Shoes}/>
         <Route  exact path="/contact" component={Contact}/>
       </Switch>
       </Router>

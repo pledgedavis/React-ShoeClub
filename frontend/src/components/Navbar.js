@@ -3,11 +3,14 @@ import {  Link } from "react-router-dom";
 
 export default function Navbar() {
     return (
-        <div>
-
+        <div className="overlay">
+            <header className="App-header">
+                <nav>
             <Link to="/" > Home</Link>
-            <Link to="/shoe" > Shoe</Link>
+            <Link to="/shoes" > Shoes</Link>
             <Link to="/contact" > Contact</Link>
+            </nav>
+            </header>
         </div>
     )
 }

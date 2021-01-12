@@ -4,7 +4,7 @@ import ShoeForm from '../components/ShoeForm'
 
 
 
-export default function Shoe() {
+export default function Shoes() {
     return (
         <div>
             Shoe Page
