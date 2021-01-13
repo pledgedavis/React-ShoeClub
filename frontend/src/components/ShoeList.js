@@ -1,49 +1,34 @@
-import React from 'react'
-// import { fetchAllShoes } from "./actions/shoesAction";
+import React, { useEffect } from "react";
 import ShoeCards from "./ShoeCards";
+import { getShoeList } from "../store/actions/shoesAction";
+import { useSelector, useDispatch } from "react-redux";
+import ShoePage from "./ShoePage";
+import { Route, Link } from "react-router-dom";
 
 export default function ShoeList() {
-    // const shoes = this.props.shoes.map((shoe, i) =>{
-    //    return <li key ={i} >{shoe.name}</li>
-    // });
+  const dispatch = useDispatch();
+  const shoeList = useSelector((state) => state.shoeList);
 
-    const shoes = [
-        {
-        name: "New shoe",
-        size: "56",
-        price: "234"
-    },
-        {
-        name: "Newer shoe",
-        size: "56",
-        price: "234"
-    },
-        {
-        name: "Newest shoe",
-        size: "56",
-        price: "234"
-    },
-        {
-        name: "Newy shoe",
-        size: "56",
-        price: "234"
-    }
+  const { loading, shoes, error } = shoeList;
 
-]
+  useEffect(() => {
+    dispatch(getShoeList());
+  }, [dispatch]);
 
+  console.log("shoe things here", shoeList);
 
-const shoeList = shoes.map((shoe, i) =>{
-    return <ShoeCards key={i} name={shoe.name} size={shoe.size} price={shoe.price}/>
-})
-
+  const showShoes = shoes.map((shoe) => {
+    const { name } = shoe;
     return (
-        <div>
-            Shoe List
-
-                {shoeList}
-
-
-
-        </div>
-    )
+      <div key={shoe.id}>
+        <Link to={{ pathname: "/shoePage", shoe }}>{name}</Link>
+      </div>
+    );
+  });
+  return (
+    <>
+      <h1>Shoe List</h1>
+      {showShoes}
+    </>
+  );
 }
