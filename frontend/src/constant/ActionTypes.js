@@ -4,3 +4,8 @@ export const GET_SHOES_FAIL = "GET_SHOES_FAIL";
 
 export const GET_SHOE = "GET_SHOE";
 export const GET_SHOE_FAIL = "GET_SHOE_FAIL";
+
+export const GET_COMMENT = "GET_COMMENT_REQUEST";
+export const GET_COMMENT_FAIL = "GET_COMMENT_SUCCESS";
+export const ADD_COMMENT = "ADD_COMMENT";
+export const ADD_COMMENT_FAIL = "COMMENT_ADDED";
