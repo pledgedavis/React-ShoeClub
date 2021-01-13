@@ -1,6 +1,6 @@
-export const GET_SHOES_REQUEST = 'GET_SHOES_REQUEST'
-export const GET_SHOES_SUCCESS = 'GET_SHOES_SUCCESS'
-export const GET_SHOES_FAIL = 'GET_SHOES_FAIL'
+export const GET_SHOES_REQUEST = "GET_SHOES_REQUEST";
+export const GET_SHOES_SUCCESS = "GET_SHOES_SUCCESS";
+export const GET_SHOES_FAIL = "GET_SHOES_FAIL";
 
-
-
+export const GET_SHOE = "GET_SHOE";
+export const GET_SHOE_FAIL = "GET_SHOE_FAIL";
