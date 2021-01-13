@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import ShoeCards from "./ShoeCards";
+// import ShoeCards from "./ShoeCards";
 import { getSingleShoe } from "../store/actions/shoesAction";
 import { useSelector, useDispatch } from "react-redux";
+import { fetchAllComments } from "../store/actions/commentsAction.js";
 
 export default function ShoePage({ location }) {
   const [description, setDescription] = useState("");
@@ -30,6 +31,7 @@ export default function ShoePage({ location }) {
   };
 
   console.log("single shoe from state", shoe);
+  console.log("here pledge", shoe);
 
   return (
     <div>

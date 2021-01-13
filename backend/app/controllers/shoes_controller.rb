@@ -1,3 +1,4 @@
+require 'pry'
 class ShoesController < ApplicationController
     before_action :shoe_inst, only: [:show, :destroy]
 
@@ -13,6 +14,7 @@ class ShoesController < ApplicationController
     end
 
   def create
+    binding.pry
     @shoe = Shoe.new(shoe_params)
 
     if @shoe.save
