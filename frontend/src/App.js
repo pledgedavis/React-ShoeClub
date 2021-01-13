@@ -1,66 +1,57 @@
-import './App.css';
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { fetchAllShoes } from "./store/actions/shoesAction";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import "./App.css";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+// import { fetchAllShoes } from "./store/store/actions/shoesAction";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import { Component } from 'react';
 
-import  Welcome from "./containers/Welcome";
-import  Shoes from "./containers/Shoes";
+import Welcome from "./containers/Welcome";
+import Shoes from "./containers/Shoes";
 import Contact from "./containers/Contact";
-import Navbar from './components/Navbar'
-
-
-
+import Navbar from "./components/Navbar";
+import ShoePage from "./components/ShoePage";
 
 class App extends Component {
   //  componentDidMount(){
   //     this.props.fetchAllShoes()
   //  }
 
-  render(){
+  render() {
     // const shoes = this.props.shoes.map((shoe, i) =>{
     //   return <li key ={i} >{shoe.name}</li>
     // });
- 
 
-    return(
+    return (
       <Router>
-        <Navbar/>
-      <Switch>
-        <Route  exact path="/" component={Welcome}/>
-        <Route  exact path="/shoes" component={Shoes}/>
-        <Route  exact path="/contact" component={Contact}/>
-      </Switch>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Welcome} />
+          <Route exact path="/shoes" component={Shoes} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/shoePage" component={ShoePage} />
+        </Switch>
       </Router>
-    )
+    );
 
+    // return (
 
+    //       // <Router>
+    //   <div className="App">
+    //     <header className="App-header">
+    //     {/* <Route exact path="/" component={Home} /> */}
+    //       <h1>
+    //      Shoegram
+    //       </h1>
+    //       <p>{this.props.loading ? <h3>Loading...</h3> : shoes }</p>
+    //       {console.log("hello", this.shoes)}
 
+    //     </header>
+    //   </div>
+    //   // </Router>
 
-
-
-
-  // return (
-
-  //       // <Router>
-  //   <div className="App">
-  //     <header className="App-header">
-  //     {/* <Route exact path="/" component={Home} /> */}
-  //       <h1>
-  //      Shoegram
-  //       </h1>
-  //       <p>{this.props.loading ? <h3>Loading...</h3> : shoes }</p>
-  //       {console.log("hello", this.shoes)}
-       
-  //     </header>
-  //   </div>
-  //   // </Router>
-   
-  // ); 
+    // );
   }
 }
-
 
 // const mapStateToProps = state => {
 // console.log(state)
@@ -72,11 +63,7 @@ class App extends Component {
 
 // export default connect(mapStateToProps, {fetchAllShoes})(App);
 
-export default App
-
-
-
-
+export default App;
 
 // // import React from 'react';
 // // import Navbar from './components/Navbar';
@@ -88,7 +75,6 @@ export default App
 // import store from './store.js'
 // import { BrowserRouter, Route, Switch} from 'react-router-dom'
 // // allows me to create multiple pages ^
-
 
 // function App() {
 //   return (

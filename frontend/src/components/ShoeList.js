@@ -1,27 +1,35 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from "react";
 import ShoeCards from "./ShoeCards";
-import {getShoes} from '../store/actions/shoesAction'
-import {useSelector, useDispatch } from 'react-redux'
-
+import { getShoes } from "../store/actions/shoesAction";
+import { useSelector, useDispatch } from "react-redux";
+import ShoePage from "./ShoePage";
+import { Route, Link } from "react-router-dom";
 
 export default function ShoeList() {
-const dispatch = useDispatch()
-const shoeList = useSelector(state => state.getShoeListFromReducer)
+  const dispatch = useDispatch();
+  const shoeList = useSelector((state) => state.shoeList);
 
-const {loading, shoes, error } = shoeList
-console.log(loading, shoes, "loading things here")
-useEffect(() => {
-    dispatch(getShoes()) 
-}, [dispatch])
+  const { loading, shoes, error } = shoeList;
 
+  useEffect(() => {
+    dispatch(getShoes());
+  }, [dispatch]);
+
+  console.log("shoe things here", shoeList);
+
+  const showShoes = shoes.map((shoe) => {
+    const { name } = shoe;
     return (
-        <div>
-            Shoe List
-
-             
-          {shoes}
-
-
-        </div>
-    )
+      <div>
+        {/* <link to>{name}</link> */}
+        <Link to="/shoePage">{name}</Link>
+      </div>
+    );
+  });
+  return (
+    <>
+      <h1>Shoe List</h1>
+      {showShoes}
+    </>
+  );
 }
