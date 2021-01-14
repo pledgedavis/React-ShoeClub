@@ -35,15 +35,6 @@ export default function ShoePage({ location }) {
   }, [shoeSelected]);
   // dependency array so useEffect can keep track of the functions objects/variables
 
-  // if (location.shoe) {
-  //   comments = location.shoe.comments;
-
-  //   showComments = comments.map((comment) => {
-  //     const { description, id } = comment;
-  //     return <p key={id}>{description}</p>;
-  //   });
-  // }
-
   if (!location.shoe) {
     return <h1> No shoe selected</h1>;
   }

@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-// import ShoeCards from "./ShoeCards";
 import { getShoeList } from "../store/actions/shoesAction";
 import { useSelector, useDispatch } from "react-redux";
-import ShoePage from "./ShoePage";
 import { Route, Link } from "react-router-dom";
 
 export default function ShoeList() {
