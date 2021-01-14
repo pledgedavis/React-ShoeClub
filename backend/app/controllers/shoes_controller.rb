@@ -1,6 +1,6 @@
 require 'pry'
 class ShoesController < ApplicationController
-    before_action :shoe_inst, only: [:show, :destroy]
+    before_action :shoe_inst, only: [:show]
 
     
     def index 
@@ -12,30 +12,6 @@ class ShoesController < ApplicationController
     def show 
         render json: @shoe, include: [:comments]
     end
-
-  def create
-    binding.pry
-    @shoe = Shoe.new(shoe_params)
-
-    if @shoe.save
-      render json: @shoe, status: :created, location: @shoe
-    else
-      render json: @shoe
-    end
-  end
-
- 
-  def update
-    if @shoe.update(shoe_params)
-      render json: @shoe
-    else
-      render json: @shoe
-    end
-  end
-
-  def destroy
-    @shoe.destroy
-  end
 
     private 
 
