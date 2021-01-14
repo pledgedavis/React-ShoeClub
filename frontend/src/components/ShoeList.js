@@ -17,9 +17,15 @@ export default function ShoeList() {
     const { name } = shoe;
     return (
       <div key={shoe.id}>
-        <img className="ShoesImg" src={shoe.image} />
-        <h4>{shoe.description}</h4>
-        <Link to={{ pathname: "/shoePage", shoe }}>{name}</Link>
+        <Link className="ShoesLink" to={{ pathname: "/shoePage", shoe }}>
+          {name}
+        </Link>
+        <h4 className="ShoesD">{shoe.description}</h4>
+        <ul className="ShoesList">
+          <br></br> <br></br>
+          <img className="ShoesImg" src={shoe.image} />
+          <br></br>
+        </ul>
       </div>
     );
   });
