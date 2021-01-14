@@ -1,9 +1,9 @@
 class CreateShoes < ActiveRecord::Migration[6.0]
   def change
     create_table :shoes do |t|
-      t.string "name"
-      t.integer "size"
-      t.integer "price"
+      t.string :name
+      t.string :image
+      t.string :description
   
       t.timestamps
     end

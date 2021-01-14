@@ -2,7 +2,7 @@ require 'pry'
 
 class CommentsController < ApplicationController
 
-    before_action :comment_inst, only: [:show, :destroy, :create]
+    before_action :comment_inst, only: [:show, :create]
 
     def index 
         comments = Comment.all
@@ -17,9 +17,6 @@ class CommentsController < ApplicationController
          end
     end
 
-    def destroy 
-       @comment.destroy
-    end
 
     def create 
      @comment = Comment.new(comment_params)
@@ -32,7 +29,6 @@ class CommentsController < ApplicationController
       render json: @comment.errors, status: :unprocessable_entity
      end
     end
-
 
 
       private 

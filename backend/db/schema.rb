@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 2021_01_09_195605) do
 
   create_table "shoes", force: :cascade do |t|
     t.string "name"
-    t.integer "size"
-    t.integer "price"
+    t.string "image"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
