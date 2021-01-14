@@ -15,8 +15,6 @@ export default function ShoeList() {
     dispatch(getShoeList());
   }, [dispatch]);
 
-  console.log("shoe things here", shoeList);
-
   const showShoes = shoes.map((shoe) => {
     const { name } = shoe;
     return (

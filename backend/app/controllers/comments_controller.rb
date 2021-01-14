@@ -23,12 +23,14 @@ class CommentsController < ApplicationController
 
     def create 
      @comment = Comment.new(comment_params)
-
-    if @todo.save
-      @comment json: @todo, status: :created, location: @comment
+      comment = @comment 
+   #   binding.pry
+    if comment.save
+      #   binding.pry
+      render json: comment
     else
       render json: @comment.errors, status: :unprocessable_entity
-    end
+     end
     end
 
 

@@ -1,17 +1,22 @@
 import * as ActionTypes from "../../constant/ActionTypes";
 
-export const shoeListReducer = (state = { shoes: [], shoe: null }, action) => {
+export const shoeListReducer = (
+  state = { comments: [], comment: null },
+  action
+) => {
   switch (action.type) {
     case ActionTypes.GET_COMMENT_REQUEST:
-      return { ...state, loading: false, shoe: action.payload };
+      return { ...state, loading: false, comment: action.payload };
 
     case ActionTypes.GET_COMMENT_SUCCESS:
-      return { ...state, loading: false, shoe: action.payload };
-
-    case ActionTypes.ADD_COMMENT:
-      return { ...state, loading: false, shoe: action.payload };
+      return { ...state, loading: false, comment: action.payload };
 
     case ActionTypes.COMMENT_ADDED:
-      return { ...state, loading: false, shoe: action.payload };
+      const newComment = action.payload;
+      return {
+        ...state,
+        loading: false,
+        comments: state.comments.concat(newComment),
+      };
   }
 };

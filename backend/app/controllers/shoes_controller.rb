@@ -10,7 +10,7 @@ class ShoesController < ApplicationController
     end
 
     def show 
-        render json: @shoe
+        render json: @shoe, include: [:comments]
     end
 
   def create

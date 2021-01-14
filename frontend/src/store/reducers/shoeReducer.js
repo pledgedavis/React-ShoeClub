@@ -12,6 +12,7 @@ export const shoeListReducer = (state = { shoes: [], shoe: null }, action) => {
       return { ...state, loading: false, error: action.payload };
 
     case ActionTypes.GET_SHOE:
+      console.log("got shoe", action.payload);
       return { ...state, loading: false, shoe: action.payload };
 
     default:

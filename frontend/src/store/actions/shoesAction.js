@@ -24,7 +24,7 @@ export const getSingleShoe = (id) => async (dispatch) => {
     dispatch({ type: ActionTypes.GET_SHOES_REQUEST });
     const response = await fetch(`/shoes/${id}`);
     const shoeData = await response.json();
-    console.log("single shoe data", shoeData);
+    // console.log("single shoe data", shoeData);
     dispatch({
       type: ActionTypes.GET_SHOE,
       payload: shoeData,
