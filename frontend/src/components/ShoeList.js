@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import ShoeCards from "./ShoeCards";
+// import ShoeCards from "./ShoeCards";
 import { getShoeList } from "../store/actions/shoesAction";
 import { useSelector, useDispatch } from "react-redux";
 import ShoePage from "./ShoePage";

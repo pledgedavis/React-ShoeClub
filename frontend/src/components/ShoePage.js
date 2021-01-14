@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
-// import ShoeCards from "./ShoeCards";
 import { getSingleShoe } from "../store/actions/shoesAction";
 import { useSelector, useDispatch } from "react-redux";
 import { addComment } from "../store/actions/commentsAction.js";
 
 export default function ShoePage({ location }) {
   const [description, setDescription] = useState("");
-  //const [showComments, setShowComments] = useState([]);
+  const [showComments, setShowComments] = useState([]);
+  // functions to update the state
   const shoeSelected = useSelector((state) => state.shoeList.shoe);
+  // the above function updates this part of the state ^
   const dispatch = useDispatch();
-  //
 
   //console.log("one shoe?", location?.shoe);
   let comments;
-  let showComments;
+  //let showComments;
 
   useEffect(() => {
     if (location.shoe) {
@@ -25,11 +25,11 @@ export default function ShoePage({ location }) {
     console.log("shoes effect?", shoeSelected);
     if (shoeSelected) {
       comments = shoeSelected.comments;
-      showComments = comments.map((comment) => {
+      const updatedComments = comments.map((comment) => {
         const { description, id } = comment;
         return <p key={id}>{description}</p>;
       });
-      //setShowComments(updatedComments);
+      setShowComments(updatedComments);
       setDescription("");
     }
   }, [shoeSelected]);
