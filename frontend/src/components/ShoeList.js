@@ -17,14 +17,18 @@ export default function ShoeList() {
     const { name } = shoe;
     return (
       <div key={shoe.id}>
+        <img className="ShoesImg" src={shoe.image} />
+        <h4>{shoe.description}</h4>
         <Link to={{ pathname: "/shoePage", shoe }}>{name}</Link>
       </div>
     );
   });
+  console.log("INFO HERE", showShoes);
   return (
     <>
       <h1>Shoe List</h1>
-      {showShoes}
+
+      <h4> {showShoes} </h4>
     </>
   );
 }
