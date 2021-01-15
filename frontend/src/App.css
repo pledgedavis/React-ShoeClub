@@ -12,7 +12,7 @@
 }
 
 header {
-  background-image: url("./images/gray.jpg");
+  background-image: url("./images/red.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -70,6 +70,7 @@ li a {
   height: 220px;
   width: 300px;
   overflow: hidden;
+  top: 1010;
 }
 
 .ShoesList {
@@ -81,3 +82,12 @@ li a {
 .ShoesLink{
 
   }    */
+.navWords {
+text-decoration: none;
+color: white;
+}
+
+.navWords:visited{
+text-decoration: none;
+color: white;
+}

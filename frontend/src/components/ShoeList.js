@@ -17,6 +17,8 @@ export default function ShoeList() {
     const { name } = shoe;
     return (
       <div key={shoe.id}>
+        <hr></hr>
+    
         <Link className="ShoesLink" to={{ pathname: "/shoePage", shoe }}>
           {name}
         </Link>
@@ -26,6 +28,7 @@ export default function ShoeList() {
           <img className="ShoesImg" src={shoe.image} />
           <br></br>
         </ul>
+        <hr></hr>
       </div>
     );
   });
@@ -33,7 +36,6 @@ export default function ShoeList() {
   return (
     <>
       <h1>Shoe List</h1>
-
       <h4> {showShoes} </h4>
     </>
   );

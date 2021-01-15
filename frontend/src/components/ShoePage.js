@@ -54,8 +54,24 @@ export default function ShoePage({ location }) {
 
   return (
     <div>
-      <h1> Shoe Page </h1>
+      <h1> Comment Page </h1>
+      <h4> Leave your comments below</h4>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       {showComments}
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
 
       <form onSubmit={handleSubmit}>
         <input
