@@ -13,7 +13,7 @@ export default function ShoePage({ location }) {
 
   //console.log("one shoe?", location?.shoe);
   let comments;
-  //let showComments;
+  
 
   useEffect(() => {
     if (location.shoe) {
@@ -46,6 +46,7 @@ export default function ShoePage({ location }) {
       description,
       shoe_id: location.shoe.id,
     };
+    // creating a newComment prop so a user is able to create a comment
     console.log("dispatching comments action");
     dispatch(addComment(newComment));
   };

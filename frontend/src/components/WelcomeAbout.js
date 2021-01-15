@@ -10,7 +10,7 @@ export default function WelcomeAbout() {
         <hr></hr>
         <h3>
           <p>Hello! welcome to the ShoesOnFire app where you can read others comment's
-          and create your own on iconic shoes.</p><p> Use the Home,Shoes, and contact pages to navigate through the app enjoy!</p>
+          and create your own on iconic shoes.</p><p> Use the Home,Shoes, and contact links from above to navigate through the app enjoy!</p>
         </h3>
       </div>
     );
