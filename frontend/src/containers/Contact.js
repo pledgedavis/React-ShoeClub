@@ -6,12 +6,13 @@ export default function Contact() {
   return (
     <div>
       <h2>
-        <ContactMe />
+        <AboutMe />
       </h2>
+      <hr></hr>
       <br></br>
       <br></br>
       <h2>
-        <AboutMe />
+        <ContactMe />
       </h2>
     </div>
   );

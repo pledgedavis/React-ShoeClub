@@ -6,7 +6,6 @@ export default function Welcome() {
   return (
     <div>
       <WelcomeHeader />
-
       <WelcomeAbout />
     </div>
   );
