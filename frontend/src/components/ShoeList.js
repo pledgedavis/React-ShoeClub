@@ -18,7 +18,7 @@ export default function ShoeList() {
     return (
       <div key={shoe.id}>
         <hr></hr>
-    
+
         <Link className="ShoesLink" to={{ pathname: "/shoePage", shoe }}>
           {name}
         </Link>
@@ -34,8 +34,8 @@ export default function ShoeList() {
   });
   console.log("INFO HERE", showShoes);
   return (
-    <div >
-      <h1>Shoe List</h1>
+    <div>
+      
       <h4> {showShoes} </h4>
     </div>
   );

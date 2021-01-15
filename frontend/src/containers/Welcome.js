@@ -6,9 +6,7 @@ export default function Welcome() {
   return (
     <div>
       <WelcomeHeader />
-      
-      <br></br> <br></br> <br></br> <br></br>
-      <br></br> <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+
       <WelcomeAbout />
     </div>
   );

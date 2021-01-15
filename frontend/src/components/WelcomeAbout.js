@@ -2,9 +2,16 @@ import React from 'react'
 
 export default function WelcomeAbout() {
     return (
-        <div>
-         
-            <h3>Hello! welcome to the shoegram app where you can read others comment and create your own on iconic shoes enjoy. </h3>
-        </div>
-    )
+      <div>
+        <hr></hr>
+        <h1>
+          <strong>ShoesOnFire</strong>
+        </h1>
+        <hr></hr>
+        <h3>
+          <p>Hello! welcome to the ShoesOnFire app where you can read others comment's
+          and create your own on iconic shoes.</p><p> Use the Home,Shoes, and contact pages to navigate through the app enjoy!</p>
+        </h3>
+      </div>
+    );
 }

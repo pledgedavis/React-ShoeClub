@@ -9,16 +9,14 @@
 
 .home {
   background-image: url("./images/shoeWallpaper1.jpeg");
- 
 }
 
-.homeText{
-text-align: center; 
-color: white;
-font-size: 70px;
-font-family: "Times New Roman", Times, serif;
-
-  }
+.homeText {
+  text-align: center;
+  color: white;
+  font-size: 70px;
+  font-family: "Times New Roman", Times, serif;
+}
 header {
   background-image: url("./images/red.jpg");
   background-repeat: no-repeat;
@@ -91,19 +89,25 @@ li a {
 
   }    */
 .navWords {
-text-decoration: none;
-color: white;
+  text-decoration: none;
+  color: white;
 }
 
-.navWords:visited{
-text-decoration: none;
-color: white;
+.navWords:visited {
+  text-decoration: none;
+  color: white;
 }
 
 body {
-background-image: url("") ;
--webkit-background-size: cover;
+  background-image: url("");
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.contactPageWords {
+  text-align: right;
+  text-decoration: none;
+  color: black;
 }
