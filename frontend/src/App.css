@@ -9,8 +9,16 @@
 
 .home {
   background-image: url("./images/shoeWallpaper1.jpeg");
+ 
 }
 
+.homeText{
+text-align: center; 
+color: white;
+font-size: 70px;
+font-family: "Times New Roman", Times, serif;
+
+  }
 header {
   background-image: url("./images/red.jpg");
   background-repeat: no-repeat;
@@ -90,4 +98,12 @@ color: white;
 .navWords:visited{
 text-decoration: none;
 color: white;
+}
+
+body {
+background-image: url("") ;
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

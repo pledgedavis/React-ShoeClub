@@ -34,9 +34,9 @@ export default function ShoeList() {
   });
   console.log("INFO HERE", showShoes);
   return (
-    <>
+    <div >
       <h1>Shoe List</h1>
       <h4> {showShoes} </h4>
-    </>
+    </div>
   );
 }

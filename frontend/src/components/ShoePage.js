@@ -53,7 +53,7 @@ export default function ShoePage({ location }) {
   console.log("single shoe from state", shoeSelected);
 
   return (
-    <div>
+    <div >
       <h1> Comment Page </h1>
       <h4> Leave your comments below</h4>
       <br></br>
