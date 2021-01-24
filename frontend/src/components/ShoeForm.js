@@ -11,7 +11,39 @@ class ShoeForm extends Component {
 
 
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <br></br> <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>{" "}
+        <br></br>
+        <form onSubmit={this.handleSubmit}>
+          Name:
+          <input
+            type="text"
+            name="name"
+            value={this.state.name}
+            onChange={this.handleChange}
+          />
+          <br></br>
+          Image:
+          <input
+            type="text"
+            name="image"
+            value={this.state.image}
+            onChange={this.handleChange}
+          />
+          <br></br>
+          Description:
+          <input
+            type="text"
+            name="description"
+            value={this.state.description}
+            onChange={this.handleChange}
+          />
+          <br></br>
+          <input type="submit" />
+        </form>
+      </div>
+    );
   }
 }
 
