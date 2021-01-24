@@ -3,6 +3,8 @@ import { getShoeList } from "../store/actions/shoesAction";
 import { useSelector, useDispatch } from "react-redux";
 import { Route, Link } from "react-router-dom";
 import  ShowShoe  from "./LikeShoeButton";
+import ShoeForm from "./ShoeForm";
+
 
 export default function ShoeList() {
   const dispatch = useDispatch();
@@ -52,20 +54,7 @@ export default function ShoeList() {
   return (
     <div>
       <h4> {showShoes} </h4>
-      <br></br> <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>{" "}
-      <br></br>
-      <form>
-        Name:
-        <input type="text" />
-        <br></br>
-        Image:
-        <input type="text" />
-        <br></br>
-        Description:
-        <input type="text" />
-        <br></br>
-         <input type="submit" value="submit" />
-      </form>
+      <ShoeForm />
     </div>
   );
 }
