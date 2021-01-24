@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getShoeList } from "../store/actions/shoesAction";
 import { useSelector, useDispatch } from "react-redux";
 import { Route, Link } from "react-router-dom";
-import  ShowShoe  from "./LikeShoeButton";
+import LikeShoeButton from "./LikeShoeButton";
 
 export default function ShoeList() {
   const dispatch = useDispatch();
@@ -27,18 +27,21 @@ export default function ShoeList() {
       <div key={shoe.id}>
         <hr></hr>
 
-        <Link className="ShoesLink" to={{ pathname: `/shoes/${shoe.id}`, shoe }}>
+        <Link
+          className="ShoesLink"
+          to={{ pathname: `/shoes/${shoe.id}`, shoe }}
+        >
           {name}
         </Link>
 
         <h4 className="ShoesD">{shoe.description}</h4>
-       
-{/*     
+
+        {/*     
         <button onClick={() => setCount(count + 1)}>
           Adding like to shoe
         </button>
         <p>{count}</p> */}
-        <ShowShoe />
+        <LikeShoeButton />
         <ul className="ShoesList">
           <br></br> <br></br>
           <img className="ShoesImg" src={shoe.image} />
