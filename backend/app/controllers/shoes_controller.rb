@@ -24,6 +24,10 @@ class ShoesController < ApplicationController
     end
 
     def update
+      if @shoe.update(shoe_params)
+        render json: @shoe
+      else 
+        render json: @shoe.errors, status: :unprocessable_entity
     end
 
     private 
