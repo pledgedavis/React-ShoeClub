@@ -55,6 +55,13 @@ export default function ShoeList() {
   return (
     <div>
       <h4> {showShoes} </h4>
+      <br></br> <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>{" "}
+      <br></br> <br></br> <br></br>
+      <form>
+        <input type="text" />
+
+        <input type="submit" value="submit" />
+      </form>
     </div>
   );
 }
