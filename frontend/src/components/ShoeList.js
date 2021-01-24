@@ -54,7 +54,7 @@ export default function ShoeList() {
   return (
     <div>
       <h4> {showShoes} </h4>
-      <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+      <br></br> <br></br> <br></br> 
       <h2>Create a Shoe!</h2>
       <ShoeForm />
     </div>

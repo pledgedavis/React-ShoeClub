@@ -36,7 +36,7 @@ class ShoeForm extends Component {
   render() {
     return (
       <div>
-        <br></br> <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>{" "}
+        <br></br>
         <br></br>
         <form onSubmit={this.handleSubmit}>
           Name:
