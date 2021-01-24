@@ -9,6 +9,29 @@ class ShoeForm extends Component {
     description: "",
   };
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    const shoe = {
+      name: this.state.name,
+      image: this.state.image,
+      description: this.state.description,
+    };
+
+    this.props.addShoe(shoe);
+
+    this.setState({
+      name: "",
+      image: "",
+      description: "",
+    });
+  };
+
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+  };
 
   render() {
     return (
