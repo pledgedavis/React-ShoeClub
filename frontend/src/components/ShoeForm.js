@@ -3,13 +3,15 @@ import { connect } from "react-redux";
 import { addShoe } from "../store/actions/shoesAction";
 
 class ShoeForm extends Component {
- 
+  state = {
+    name: "",
+    image: "",
+    description: "",
+  };
+
+
   render() {
-    return (
-      <div>
-        
-      </div>
-    );
+    return <div></div>;
   }
 }
 
