@@ -40,3 +40,19 @@ export const getSingleShoe = (id) => async (dispatch) => {
     });
   }
 };
+
+export const addShoe = (shoe) => {
+  return (dispatch) => {
+    dispatch({ type: "ADDING_SHOE" });
+    fetch("/shoes", {
+      method: "POST",
+      body: JSON.stringify(shoe),
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((shoe) => dispatch({ type: "SHOE_ADDED", payload: shoe }));
+  };
+};

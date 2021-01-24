@@ -1,27 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { addShoe } from "../store/actions/shoesAction";
 
- class ShoeForm extends Component {
-    render() {
-        return (
-          <div>
-            <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>{" "}
-            <br></br> <br></br>
-            <form>
-              Name:
-              <input type="text" />
-              <br></br>
-              Image:
-              <input type="text" />
-              <br></br>
-              Description:
-              <input type="text" />
-              <br></br>
-              <input type="submit" value="submit" />
-            </form>
-          </div>
-        );
-    }
+class ShoeForm extends Component {
+ 
+  render() {
+    return (
+      <div>
+        
+      </div>
+    );
+  }
 }
 
-
-export default ShoeForm;
+export default connect(null, { addShoe })(ShoeForm);
+// export default ShoeForm;
