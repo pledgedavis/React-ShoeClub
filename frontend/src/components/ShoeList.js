@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getShoeList } from "../store/actions/shoesAction";
 import { useSelector, useDispatch } from "react-redux";
 import { Route, Link } from "react-router-dom";
-import LikeShoeButton from "./LikeShoeButton";
+import  ShowShoe  from "./LikeShoeButton";
 
 export default function ShoeList() {
   const dispatch = useDispatch();
@@ -27,21 +27,18 @@ export default function ShoeList() {
       <div key={shoe.id}>
         <hr></hr>
 
-        <Link
-          className="ShoesLink"
-          to={{ pathname: `/shoes/${shoe.id}`, shoe }}
-        >
+        <Link className="ShoesLink" to={{ pathname: "/shoePage", shoe }}>
           {name}
         </Link>
 
         <h4 className="ShoesD">{shoe.description}</h4>
-
-        {/*     
+       
+{/*     
         <button onClick={() => setCount(count + 1)}>
           Adding like to shoe
         </button>
         <p>{count}</p> */}
-        <LikeShoeButton />
+        <ShowShoe />
         <ul className="ShoesList">
           <br></br> <br></br>
           <img className="ShoesImg" src={shoe.image} />
@@ -56,11 +53,18 @@ export default function ShoeList() {
     <div>
       <h4> {showShoes} </h4>
       <br></br> <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>{" "}
-      <br></br> <br></br> <br></br>
+      <br></br>
       <form>
+        Name:
         <input type="text" />
-
-        <input type="submit" value="submit" />
+        <br></br>
+        Image:
+        <input type="text" />
+        <br></br>
+        Description:
+        <input type="text" />
+        <br></br>
+         <input type="submit" value="submit" />
       </form>
     </div>
   );

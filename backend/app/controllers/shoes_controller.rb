@@ -29,6 +29,7 @@ class ShoesController < ApplicationController
       else 
         render json: @shoe.errors, status: :unprocessable_entity
     end
+  end
 
     private 
 
