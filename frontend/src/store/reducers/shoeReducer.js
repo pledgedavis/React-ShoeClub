@@ -3,6 +3,8 @@ import * as ActionTypes from "../../constant/ActionTypes";
 export const shoeListReducer = (state = { shoes: [], shoe: null }, action) => {
   switch (action.type) {
     case ActionTypes.GET_SHOES_REQUEST:
+      // debugger;
+      console.log("shoe reducer");
       return { ...state, loading: true };
 
     case ActionTypes.GET_SHOES_SUCCESS:
@@ -19,3 +21,4 @@ export const shoeListReducer = (state = { shoes: [], shoe: null }, action) => {
       return state;
   }
 };
+// listens for actions

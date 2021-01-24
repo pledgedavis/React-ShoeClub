@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+// the above hook useState allows me to have state variables
 import { getSingleShoe } from "../store/actions/shoesAction";
 import { useSelector, useDispatch } from "react-redux";
 import { addComment } from "../store/actions/commentsAction.js";
@@ -7,15 +8,18 @@ export default function ShoePage({ location }) {
   const [description, setDescription] = useState("");
   const [showComments, setShowComments] = useState([]);
   // functions to update the state
+  // debugger;
   const shoeSelected = useSelector((state) => state.shoeList.shoe);
   // the above function updates this part of the state ^
   const dispatch = useDispatch();
+  // used to dispatch actions to the store
 
   //console.log("one shoe?", location?.shoe);
   let comments;
-  
+  // debugger;
 
   useEffect(() => {
+    // runs on page load
     if (location.shoe) {
       dispatch(getSingleShoe(location.shoe.id));
     }
@@ -31,9 +35,11 @@ export default function ShoePage({ location }) {
       });
       setShowComments(updatedComments);
       setDescription("");
+      // set description clears form after comments are updated
     }
   }, [shoeSelected]);
   // dependency array so useEffect can keep track of the functions objects/variables
+  // debugger;
 
   if (!location.shoe) {
     return <h1> No shoe selected</h1>;

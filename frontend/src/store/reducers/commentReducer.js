@@ -18,5 +18,8 @@ export const shoeListReducer = (
         loading: false,
         comments: state.comments.concat(newComment),
       };
+
+    case ActionTypes.DELETE_COMMENT:
+      return { ...state, loading: false, comment: action.payload };
   }
 };

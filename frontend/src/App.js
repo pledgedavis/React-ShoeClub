@@ -2,6 +2,7 @@ import "./App.css";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+//
 
 import Welcome from "./containers/Welcome";
 import Shoes from "./containers/Shoes";
@@ -14,12 +15,12 @@ class App extends Component {
     return (
       <Router>
         <Navbar />
-        <Switch>
-          <Route exact path="/" component={Welcome} />
-          <Route exact path="/shoes" component={Shoes} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/shoePage" component={ShoePage} />
-        </Switch>
+        {/* <Switch> */}
+        <Route exact path="/" component={Welcome} />
+        <Route exact path="/shoes" component={Shoes} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/shoePage" component={ShoePage} />
+        {/* </Switch> */}
       </Router>
     );
   }

@@ -16,6 +16,7 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
+  // provider gives access throught app to global state
   document.getElementById("root")
 );
 

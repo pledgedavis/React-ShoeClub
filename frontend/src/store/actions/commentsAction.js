@@ -6,6 +6,7 @@ export const fetchAllComments = () => async (dispatch) => {
     dispatch({ type: ActionTypes.GET_COMMENTS_REQUEST });
     const response = await fetch("/comments");
     const data = await response.json();
+    // all shoes are stored inside of the response variable
     console.log(data, "comment here");
     dispatch({
       type: ActionTypes.GET_COMMENTS_SUCCESS,
