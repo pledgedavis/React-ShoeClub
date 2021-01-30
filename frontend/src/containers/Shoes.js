@@ -9,7 +9,6 @@ export default function Shoes() {
   return (
     <div>
       <ShoeList />
-     
     </div>
   );
 }

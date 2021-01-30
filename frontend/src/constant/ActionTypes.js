@@ -7,10 +7,6 @@ export const GET_SHOES_FAIL = "GET_SHOES_FAIL";
 export const GET_SHOE = "GET_SHOE";
 export const GET_SHOE_FAIL = "GET_SHOE_FAIL";
 
-
-export const ADDING_SHOE = "ADDING_SHOE";
-export const SHOE_ADDED = "SHOE_ADDED";
-
 export const GET_COMMENTS_REQUEST = "GET_COMMENTS_REQUEST";
 export const GET_COMMENTS_SUCCESS = "GET_COMMENTS_SUCCESS";
 export const GET_COMMENTS_FAIL = "GET_COMMENTS_FAIL";

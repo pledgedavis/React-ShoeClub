@@ -17,14 +17,6 @@ export const shoeListReducer = (state = { shoes: [], shoe: null }, action) => {
       console.log("got shoe", action.payload);
       return { ...state, loading: false, shoe: action.payload };
 
-    case ActionTypes.ADDING_SHOE:
-      console.log("ADDING SHOE", action.payload);
-      return { ...state, loading: true };
-
-    case ActionTypes.SHOE_ADDED:
-      console.log(" SHOE ADDED", action.payload);
-      return { ...state, loading: false, shoes: [...state.shoes.id != action.payload] };
-
     default:
       return state;
   }

@@ -4,12 +4,12 @@ import React, { useState, Component } from "react";
 //   const [count, setCount] = useState(0);
 
 //   return (
-// <>
+// <div>
 //   <button onClick={() => setCount(count + 1)}>
 //     Like!
 //   </button>
 //   <p>{count}</p>
-// </>
+// </div>
 //   );
 // }
 
@@ -25,7 +25,7 @@ class LikeShoeButton extends Component {
         <button onClick={() => this.setState({ count: count + 1 })}>
           Like!
         </button>
-        <p>{count}</p>
+        <h2>{count}</h2>
       </>
     );
   }

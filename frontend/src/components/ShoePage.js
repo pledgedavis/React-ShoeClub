@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addComment } from "../store/actions/commentsAction.js";
 
 export default function ShoePage({ location }) {
+  // location is a default prop whos parent is the router
   const [description, setDescription] = useState("");
   const [showComments, setShowComments] = useState([]);
   // functions to update the state
