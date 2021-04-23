@@ -4,7 +4,7 @@ export default function WelcomeAbout() {
   return (
     <div>
       <hr></hr>
-      <h1>
+      <h1 id="name">
         <strong>ShoesOnFire</strong>
       </h1>
       <hr></hr>
@@ -13,6 +13,8 @@ export default function WelcomeAbout() {
           Hello! welcome to the ShoesOnFire app where you can read others
           comment's and create your own on iconic shoes.
         </p>
+        <br />
+        <br />
         <p>
           Use the Home,Shoes, and contact links from above to navigate through
           the app enjoy!
