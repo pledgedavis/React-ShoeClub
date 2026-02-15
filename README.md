@@ -1,4 +1,4 @@
-# React-Shoe club
+# React-Shoe Club
 ## Hello World
 ##### Welcome to my Shoe club App's Readme to start using my app follow the instructions below..
 ### Installation
